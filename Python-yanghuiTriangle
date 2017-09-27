@@ -1,0 +1,13 @@
+def yang(max):
+    L = [1]       # 初始行
+    n = 0         # 控制输出行数
+    while n < max:   # max为输出多少行 n 决定当前输出的行
+        yield L        # 生成器 yield声明,每次执行到这里时会返回L
+        L = [L[i]+L[i+1] for i in range(n)]   # 用列表生成器的方式计算中间的值（除去两边的1）
+        L.insert(0,1)          # 加头记录1
+        L.append(1)            # 加尾记录1
+        n += 1                 # 行数+1
+
+a = yang(6)
+for i in a:
+    print (i)
