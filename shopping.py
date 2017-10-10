@@ -25,7 +25,11 @@ def jisuan(goods_list,shop_list):
            price += int(shop_list[shop_list.index(i)+1])
     return price
     
+goods_buyed = []
 
+def show_list(goods_buyed):
+    for i in goods_buyed:
+        print (i)
 def shopping():
     salary = int(input('Please enter your salary:'))
     show_shop_list(shop_list)
@@ -35,13 +39,16 @@ def shopping():
         price = jisuan(goods_list,shop_list)
         if price > salary:
             print ('Money is not enough')
+            show_list(goods_buyed)
             break
         else:
             salary -= price
+            goods_buyed.extend(goods_list)
             print (salary)
             flag = input('Continue？(y/n):')
             if flag[0].lower() == 'n':
                 print ('shopping is over')
+                show_list(goods_buyed)
                 break
 
 shopping()
