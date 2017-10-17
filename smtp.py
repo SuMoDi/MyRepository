@@ -2,12 +2,12 @@ from email.mime.text import MIMEText
 msg = MIMEText('hello,send by Python...','plain','utf-8')
 
 # 输入Email地址和口令:
-from_addr = r'xiecx@asiainfo.com'
-password = r'abcd12345Q!'
+from_addr = r'.........'
+password = r'............'
 # 输入收件人地址:
-to_addr = r'412258371@qq.com'
+to_addr = r'.............'
 # 输入SMTP服务器地址:
-smtp_server = r'mail.asiainfo.com'
+smtp_server = r'............'
 
 import smtplib
 # 构造smtp服务中心
@@ -34,8 +34,8 @@ def _format_addr(s):
     return formataddr((Header(name,'utf-8').encode(),addr))
 
 # 输入Email地址和口令:
-from_addr = r'xiecx@asiainfo.com'
-password = r'abcd12345Q!'
+from_addr = r'.............'
+password = r'................'
 # 输入收件人地址:
 to_addr = r'412258371@qq.com'
 # 输入SMTP服务器地址:
